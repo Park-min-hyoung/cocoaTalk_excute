@@ -7,20 +7,38 @@
     <meta name="description" content="This is my wehsite" />
     <title></title>
     <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
       @keyframes superSexyCoinFlip {
-        from {
+        0% {
           transform: rotateY(0);
         }
-        to {
-          transform: rotateY(180deg) translateX(100px);
+        25% {
+          transform: scale(2);
+        }
+        50% {
+          border-radius: 0px;
+          transform: rotateY(180deg) translateY(100px);
+          border-color: tomato;
+          opacity: 0;
+        }
+        75% {
+          transform: scale(5);
+          border-radius: 20px;
+        }
+        100% {
+          transform: rotateY(0);
         }
       }
       img {
-        border: 1px solid black;
+        border: 5px solid black;
+        width: 200px;
         border-radius: 50%;
-      }
-      img:hover {
-        animation: superSexyCoinFlip 5s ease-in-out infinite;
+        animation: superSexyCoinFlip 5s ease-in-out;
       }
     </style>
   </head>
