@@ -16,22 +16,38 @@
         height: 100vh;
         margin: 50px;
       }
-      input {
-        border: 1px solid wheat;
+      a:visited {
+        color: tomato;
       }
-      input:required {
-        background-color: tomato;
+      a:hover {
+        color: teal;
       }
-      input[placeholder~="name"] {
-        background-color: pink;
+      a:active {
+        color: yellow;
+      }
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form:focus-within {
+        background-color: seagreen;
+      }
+      /* form:hover input {
+        background-color: sienna;
+      } */
+      form:hover input:focus {
+        background-color: sienna;
       }
     </style>
   </head>
   <body>
+    <a href="https://naver.com">Go to apple</a>
     <form>
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="password" required placeholder="password" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
     </form>
   </body>
 </html>
