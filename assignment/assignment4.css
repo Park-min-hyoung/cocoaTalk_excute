@@ -1,0 +1,124 @@
+:root {
+  --animation-width: 15%;
+  --animation-background-color: white;
+}
+
+@keyframes rotate180 {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #6bbcbe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-animation-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.circle-animation-wrapper {
+  width: var(--animation-width);
+  animation: rotate180 1s ease forwards infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 125px;
+  position: relative;
+  will-change: transform;
+}
+
+.circle::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.circle {
+  width: 10%;
+  border-radius: 50%;
+  background-color: var(--animation-background-color);
+  position: absolute;
+}
+
+.circle:first-child {
+  left: 0;
+}
+
+.circle:last-child {
+  right: 0;
+}
+
+.rectangle-animation-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+.rectangle-animation-wrapper {
+  width: var(--animation-width);
+  margin-bottom: auto;
+  position: relative;
+}
+
+.rectangle {
+  width: 16%;
+  height: 100%;
+  background-color: var(--animation-background-color);
+  position: absolute;
+  animation: scaleUp 1.1s ease infinite;
+}
+
+.rectangle:first-child {
+  left: 0;
+  animation-delay: 0s;
+}
+
+.rectangle:nth-child(2) {
+  left: 21%;
+  animation-delay: 0.1s;
+}
+
+.rectangle:nth-child(3) {
+  left: 42%;
+  animation-delay: 0.2s;
+}
+
+.rectangle:nth-child(4) {
+  left: 63%;
+  animation-delay: 0.3s;
+}
+
+.rectangle:last-child {
+  left: 84%;
+  animation-delay: 0.4s;
+}
