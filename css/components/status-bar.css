@@ -18,11 +18,13 @@
 }
 
 .status-bar__columns:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  text-align: right;
 }
 
 .status-bar__columns:last-child .fa-battery-full {
   margin: 0 5px;
+}
+
+.status-bar__columns:last-child .fa-bolt {
+  margin-right: 8px;
 }

@@ -22,3 +22,7 @@
   font-size: 26px;
   font-weight: 700;
 }
+
+.alt-header__column:last-child span:last-child {
+  margin-left: 20px;
+}
