@@ -41,6 +41,8 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 15px;
+  transform: translateX(-10px);
 }
 
 .message-row img {
@@ -72,4 +74,24 @@
   margin-left: 5px;
   font-size: 12px;
   opacity: 0.7;
+}
+
+.massage-row--own {
+  justify-content: flex-end;
+  transform: translateX(17.5px);
+}
+
+.massage-row--own .message__bubble {
+  border-top-left-radius: 12.5px;
+  border-top-right-radius: 0px;
+  background-color: var(--yellow);
+  margin-left: 8px;
+}
+
+.massage-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.massage-row--own .message__time {
+  margin: 0;
 }
