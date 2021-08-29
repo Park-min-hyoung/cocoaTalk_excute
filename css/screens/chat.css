@@ -95,3 +95,62 @@
 .massage-row--own .message__time {
   margin: 0;
 }
+
+.reply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.reply-column:first-child {
+  width: 10%;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.reply-column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply-column:last-child input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: var(--main-border);
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+.reply-column:last-child > i,
+.reply-column:last-child button {
+  position: absolute;
+}
+
+.reply-column:last-child > i {
+  right: 45px;
+  top: 10px;
+  font-size: 24px;
+  opacity: 0.4;
+}
+
+.reply-column:last-child button {
+  right: 3px;
+  top: 4px;
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
