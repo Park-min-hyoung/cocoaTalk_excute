@@ -25,7 +25,3 @@
 .status-bar__columns:last-child .fa-battery-full {
   margin: 0 2px;
 }
-
-.status-bar__columns:last-child .fa-bolt {
-  margin-right: 10px;
-}
